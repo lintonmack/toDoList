@@ -7,10 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post">
+    <form method="post" onsubmit="return addToDoItem()">
         <input id="toDoItem" type="text" placeholder="New to-do item">
         <input type="submit" value="Add">
     </form>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+    var toDoItems = []
+    function addToDoItem () {
+        var toDoItem = document.getElementById('toDoItem').value
+        toDoItems.push(toDoItem)
+
+        console.log(toDoItems)
+        return false
+    }
+              </script>
 </body>
 </html>
